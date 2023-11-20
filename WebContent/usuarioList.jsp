@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Aplicacion Gestion de Usuario</title>
+<title>Movimientos</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 integrity=" sha384-gg0yROIXCbv3Xipma34MD+dH/1fQ784/j6cY/ITQUOhcWr7×93voR×T2MZwIT" crossorigin="anonymous">
 </head>
@@ -28,18 +28,18 @@ integrity=" sha384-gg0yROIXCbv3Xipma34MD+dH/1fQ784/j6cY/ITQUOhcWr7×93voR×T2MZw
 	<div class="row">
 		<!-- <div class="alert alert-success" *ngIf= 'message'>({message}}</div> -->
 		<div class="container">
-		<h3 class="text-center">Listado de Usuarios</h3>
+		<h3 class="text-center">Movimientos</h3>
 		<hr>
 		<div class="container text-left">
-			<a href="<%=request.getContextPath()%>/new" class="btn btn-success"> Agregar Nuevo Usuanios</a>
+			<a href="<%=request.getContextPath()%>/new" class="btn btn-success"> + </a>
 		</div>
 		<br>
 		<table class="table table-bordered">
 		<thead>
 			<tr>
 			<th>ID</th>
-			<th>NOMBRE</th>
-			<th>EMAIL</th>
+			<th>USER_ID</th>
+			<th>VALOR</th>
 			<th>PAIS</th>
 			<th>ACCIONES</th>
 		</tr>

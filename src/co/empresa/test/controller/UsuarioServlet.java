@@ -16,6 +16,7 @@ import co.empresa.test.dao.UsuarioDao;
 import co.empresa.test.dao.UsuarioDaoFactori;
 import co.empresa.test.dao.UsuarioDaoMySQL;
 import co.empresa.test.modelo.Usuario;
+import co.empresa.test.modelo.Movimiento;
 
 /**
  * Servlet implementation class UsuarioServlet
@@ -63,12 +64,8 @@ public class UsuarioServlet extends HttpServlet {
 		case "/edit" :
 			showEditForm(request, response);
 			break;
-		case "/update" : 
-			actualizarUsuario(request, response);
-			break;
-		default : 
-			listUsuarios(request,response);
-			break;
+		default: 
+			listMovimientos(request, response);
 		}
 		}catch(SQLException e) {
 			throw new ServletException(e);
@@ -137,8 +134,8 @@ public class UsuarioServlet extends HttpServlet {
 		response.sendRedirect("list");		
 	}
 	
-	private void listUsuarios(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
-		List<Usuario> listUsuario = usuarioDao.selectAll();
+	private void listMovimientos(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
+		List<Movimiento> listUsuario = usuarioDao.selectAll();
 		
 		request.setAttribute("listUsuarios", listUsuario);
 		
@@ -147,7 +144,11 @@ public class UsuarioServlet extends HttpServlet {
 		
 	}
 	
-	
+	private void loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
+		dispatcher.forward(request, response);
+		
+	}
 	
 }
 

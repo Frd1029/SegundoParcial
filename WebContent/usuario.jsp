@@ -40,7 +40,6 @@
 		<div class="card">
 			<div class="card-body">
 
-
 			<c:if test="${usuario != null}">
 				<form action="update" method="post">
 			</c:if>
