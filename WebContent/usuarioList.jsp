@@ -14,11 +14,11 @@ integrity=" sha384-gg0yROIXCbv3Xipma34MD+dH/1fQ784/j6cY/ITQUOhcWr7×93voR×T2MZw
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark">
 			<div>
-				<a href="#" class="navbar-brand">Gestion de Usuarios</a>		
+				<a href="#" class="navbar-brand">Movimientos</a>		
 			</div>
 			
 			<ul class="navbar-nav">
-				<li><a href="<%=request.getContextPath() %>/list" class="nav-link">Usuarios</a></li>				
+				<li><a href="<%=request.getContextPath() %>/list" class="nav-link">Movimientos</a></li>				
 			
 			</ul>
 		</nav>
@@ -74,13 +74,5 @@ integrity=" sha384-gg0yROIXCbv3Xipma34MD+dH/1fQ784/j6cY/ITQUOhcWr7×93voR×T2MZw
 		
 		</table>
 	</div>
-		
-		
-		
-		
-	
-		
-		
-
 </body>
 </html>

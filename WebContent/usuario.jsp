@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Aplicacion Gestion de Usuarios</title>
+<title>Nuevo Movimiento</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -22,7 +22,7 @@
 			style="background-color: tomato">
 
 			<div>
-				<a href="#" class="navbar-brand"> Gestion de Usuarios </a>
+				<a href="#" class="navbar-brand"> Agregar Movimiento </a>
 			</div>
 
 			<ul class="navbar-nav">

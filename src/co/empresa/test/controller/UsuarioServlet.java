@@ -64,8 +64,10 @@ public class UsuarioServlet extends HttpServlet {
 		case "/edit" :
 			showEditForm(request, response);
 			break;
-		default: 
+		case "/mov" : 
 			listMovimientos(request, response);
+		default: 
+			loginUser(request, response);
 		}
 		}catch(SQLException e) {
 			throw new ServletException(e);
@@ -111,7 +113,8 @@ public class UsuarioServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("usuario.jsp");
 		dispatcher.forward(request, response);
 	}
-	
+
+/**
 	private void actualizarUsuario(HttpServletRequest request, HttpServletResponse response) throws SQLException,ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String nombre = request.getParameter("nombre");
@@ -120,11 +123,12 @@ public class UsuarioServlet extends HttpServlet {
 		
 		Usuario usuario = new Usuario(id,nombre,email,pais);
 		
-		usuarioDao.update(usuario);
+		movimientoDao.update(usuario);
 		
 		response.sendRedirect("list");
 		
 	}
+*/
 	
 	private void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
@@ -135,9 +139,9 @@ public class UsuarioServlet extends HttpServlet {
 	}
 	
 	private void listMovimientos(HttpServletRequest request, HttpServletResponse response) throws ServletException, SQLException, IOException {
-		List<Movimiento> listUsuario = usuarioDao.selectAll();
+		List<Usuario> listMovimiento = usuarioDao.selectAll();
 		
-		request.setAttribute("listUsuarios", listUsuario);
+		request.setAttribute("listUsuarios", listMovimiento);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("usuarioList.jsp");
 		dispatcher.forward(request, response);
